@@ -48,26 +48,14 @@
                 <h2>INFORMATION</h2>
                 <div class="border"></div>
                 <table>
-                  <tr>
-                      <td class="top_info_date">01-20-2018</td>
-                      <td class="top_info_mark pc_only">◆</td>
-                      <td class="top_info_text hover_yellow">未来コライのサイトを開設しました。</td>
-                  </tr>
-                    <!-- <tr>
-                        <td class="top_info_date">01-20-2018</td>
-                        <td class="top_info_mark pc_only">◆</td>
-                        <td class="top_info_text hover_yellow">未来コライのサイトを開設しました。</td>
-                    </tr>
+                    <?php foreach ($information as $information_item): ?>
                     <tr>
-                        <td class="top_info_date">01-20-2018</td>
+                        <td class="top_info_date"><?= substr($information_item['publishment_date'], 0, 10) ?></td>
                         <td class="top_info_mark pc_only">◆</td>
-                        <td class="top_info_text hover_yellow">未来コライのサイトを開設しました。</td>
+                        <td class="top_info_text hover_yellow"><?=$information_item['title']?>
+                        <?=$information_item['detail']?></td>
                     </tr>
-                    <tr>
-                        <td class="top_info_date">01-20-2018</td>
-                        <td class="top_info_mark pc_only">◆</td>
-                        <td class="top_info_text hover_yellow">未来コライのサイトを開設しました。</td>
-                    </tr> -->
+                    <?php endforeach;?>
                 </table>
 
                 <div class="top_info_text_moer"><a href="#">MORE</a></div>
