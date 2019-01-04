@@ -305,36 +305,23 @@
                     <div class="box_bottom"></div>
                 </div>
                 <div class="about_history_main">
-                    <!-- <div class="about_history_year">
-                        <p>2020</p>
-                    </div>
-                    <div class="about_history_event">
-                        <ul>
-                            <li class="event_title">とてつもなくすごいことをした</li>
-                            <li class="event_date">11.22</li>
-                        </ul> -->
-                        <!--                        <div class="event_text"></div>-->
-                    <!-- </div>
-                    <div class="about_history_year">
-                        <p>2019</p>
-                    </div>
-                    <div class="about_history_event">
-                        <ul>
-                            <li class="event_title">それなりにすごいことをした</li>
-                            <li class="event_date">11.27</li>
-                        </ul> -->
-                        <!--                        <div class="event_text"></div>-->
-                    <!-- </div> -->
-                    <div class="about_history_year">
-                        <p>2018</p>
-                    </div>
-                    <div class="about_history_event">
-                        <ul>
-                            <li class="event_title">未来コライ結成</li>
-                            <li class="event_date">09.14</li>
-                        </ul>
+                    <?php $year = '';?>
+                    <?php foreach ($history as $history_item) : ?>
+                        <?php if (strcmp($year, substr($history_item['publishment_date'], 0, 4))) : ?>
+                            <div class="about_history_year">
+                                <p><?=substr($history_item['publishment_date'], 0, 4)?></p>
+                            </div>
+                        <?php endif;?>
+                        <div class="about_history_event">
+                            <ul>
+                                <li class="event_title"><?=$history_item['title']?></li>
+                                <li class="event_date"><?=str_replace("-", ".", substr($history_item['publishment_date'], 5, 5))?></li>
+                            </ul>
 <!--                        <div class="event_text"></div>-->
                     </div>
+                    <?php
+                        $year = substr($history_item['publishment_date'], 0, 4); 
+                        endforeach; ?>
                 </div>
                 <!--about_history_main -->
             </div>
