@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: '07LogoTypeGothic7';
+	src: url('font/07LogoTypeGothic7.ttf');
+}
+
+body {
+	　webkit-text-size-adjust: 100%;
+	  display: inline;
+    background-color: #fefbf1;
+    margin: 0 auto;
+    padding: 0;
+    color: #192c50;
+    height: 100%;
+    font-family: '07LogoTypeGothic7',"メイリオ", sans-serif;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+h1,h2,h3,h4{
+    margin:0;
+		letter-spacing: 0.1em;
+}
+p{
+    margin:0;
+		letter-spacing: 0.1em;
+		font-size: 16px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+    margin:0;
+}
+
+a {
+    text-decoration: none;
+    color: #192a51;
+}
+img{
+  width: 100%;
+}
+.border{
+    width: 100%;
+    border-bottom: 2px solid #192a51;
+}
+.header_menu_main li a:hover::after {
+    bottom: 0;
+    opacity: 1;
+}
+/*メイン*/
+.main_contents {
+    margin: 20px auto 60px;
+    /*background-color: #dae2e5;*/
+    min-height: 100%;
+    overflow: hidden;
+}
+.push {
+    height: 64px;
+}
+
+/*各ページタイトル*/
+.title_contents{
+    padding: 6px;
+		margin:80px auto 20px auto;
+}
+.pege_title{
+    border: 1px solid #fefbf1;
+    padding: 5px 15px;
+    color: #fefbf1;
+}
+
+.pege_title_sub{
+    margin-left:23px;
+		margin-bottom: 5px;
+    letter-spacing: 0.1em;
+}
+.title_sub_contents{
+	margin: 20px 0 20px 0;
+}
+.title_sub_border_bottom{
+    height: 3px;
+}
+.button{
+  margin: 10px auto;
+  text-align: center;
+  border-radius: 22px;
+}
+.button a{
+  width: 250px;
+  display: inline-block;
+  padding: 10px 13px;
+  background-color: #192a51;
+  border:solid 3px #192a51;
+  border-radius: 22px;
+  color: #fefbf1;
+  transition: 0.3s;
+}
+.button a:hover{
+  background-color: #fefbf1;
+  color: #192a51;
+}
+.sns_sp{
+		width: 90%;
+		margin: 0px auto;
+}
+.sns_sp ul{
+		margin-top: 20px;
+		padding: 10px;
+		display: flex;
+}
+.sns_sp ul li{
+		width: 45px;
+		height: 45px;
+		text-align: center;
+		transform:rotate(-45deg);
+		margin: 0 16px;
+}
+
+.sns_sp ul li a{
+		font-size: 10px;
+		display: inline-block;
+		transform:rotate(45deg);
+		margin: 2px 0px 0px -2px;
+		color:#fefbf1;
+}
+.sp_only{ display: none;}
+@media screen and (min-width:1131px) {
+    .main_contents {
+        width: 1120px;
+    }
+
+}/*@media screen and (min-width:1131px)*/
+
+
+@media screen and (max-width:1130px) {
+    .main_top_img {
+        padding: 0 10px;
+    }
+
+    .main_contents {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}/*@media screen and (max-width:1130px)*/
+
+@media screen and (max-width:789px) {
+    .pc_only{ display: none;}
+		.sp_only{ display: block;;}
+		.pege_title {
+			text-align: center;
+		}
+		.pege_title_sub{
+			text-align: center;
+			margin-left: 0px;
+		}
+
+}/*@media screen and (max-width:1130px)*/

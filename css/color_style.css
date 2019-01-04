@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+
+/*メインカラー　通常文字色*/
+.red{
+    color: #8b4957;
+}
+
+.blue{
+    color: #2b5575;
+}
+
+.green{
+    color: #417574;
+}
+
+.yellow{
+    color: #7c7158;
+}
+/*メインカラー　hover時*/
+.hover_red a:hover {
+    color: #8b4957;
+}
+
+.hover_blue a:hover {
+    color: #2b5575;
+}
+
+.hover_green a:hover {
+    color: #417574;
+}
+
+.hover_yellow a:hover {
+    color: #7c7158;
+}
+/*メインカラー　メニュー下線*/
+.hover_red a::after {
+    color: #8b4957;
+    background-color: #8b4957;
+}
+
+.hover_blue a::after {
+    background-color: #2b5575;
+}
+
+.hover_green a::after {
+    background-color: #417574;
+}
+
+.hover_yellow a::after {
+    background-color: #7c7158;
+}
+/*メインカラー　背景*/
+.bg_red{
+    background-color: #6c3d55;
+}
+
+.bg_blue{
+    background-color: #244768;
+}
+
+.bg_green{
+    background-color: #335c68;
+}
+
+.bg_yellow{
+    background-color: #7c7158;
+}
+.bg_navy{
+    background-color: #23314c;
+}
+
+/*メインカラー　背景 hover時*/
+.hover_bg_red:hover {
+    background-color: #6c3d55;
+}
+
+.hover_bg_blue:hover {
+    background-color: #244768;
+}
+
+.hover_bg_green:hover {
+    background-color: #335c68;
+}
+
+.hover_bg_yellow:hover {
+    background-color: #7c7158;
+}
+
+/*グラデーションカラー*/
+.gradation_1{
+    background-color: #6c3d55;
+}
+.gradation_2{
+    background-color: #5a405a;
+}
+.gradation_3{
+    background-color: #48425f;
+}
+.gradation_4{
+    background-color: #364563;
+}
+.gradation_5{
+    background-color: #244768;
+}
+.gradation_6{
+    background-color: #284c68;
+}
+.gradation_7{
+    background-color: #2c5268;
+}
+.gradation_8{
+    background-color: #2f5768;
+}
+.gradation_9{
+    background-color: #335c68;
+}
+.gradation_10{
+    background-color: #456164;
+}
+.gradation_11{
+    background-color: #586760;
+}
+.gradation_12{
+    background-color: #6a6c5c;
+}
+.gradation_13{
+    background-color: #7c7158;
+}
+.gradation_14{
+    background-color: #786457;
+}
+.gradation_15{
+    background-color: #745757;
+}
+.gradation_16{
+    background-color: #704a56;
+}
+.border_red{
+    border: solid 5px #6c3d55;
+}
+
+.border_blue{
+    border: solid 5px #244768;
+}
+
+.border_green{
+    border: solid 5px #335c68;
+}
+
+.border_yellow{
+    border: solid 5px #7c7158;
+}
