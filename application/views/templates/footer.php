@@ -12,17 +12,17 @@
 
 <div class="footer_copy">
         <ul class="footer_square_left">
-            <li class="bg_red"><a href="#"></a></li>
-            <li class="square_down bg_blue"><a href="#"></a></li>
-            <li class="bg_green"><a href="#"></a></li>
-            <li class="square_down bg_yellow"><a href="#"></a></li>
+            <li class="bg_red"></li>
+            <li class="square_down bg_blue"></li>
+            <li class="bg_green"></li>
+            <li class="square_down bg_yellow"></li>
         </ul>
         <div class="pc_only">
         <ul class="footer_square_right">
-            <li class="bg_red"><a href="#"></a></li>
-            <li class="square_down bg_blue"><a href="#"></a></li>
-            <li class="bg_green"><a href="#"></a></li>
-            <li class="square_down bg_yellow"><a href="#"></a></li>
+            <li class="bg_red"></li>
+            <li class="square_down bg_blue"></li>
+            <li class="bg_green"></li>
+            <li class="square_down bg_yellow"></li>
         </ul>
         </div>
         <p>2018<i class="far fa-copyright fa-fw"></i>MIRAI KORAI.</p>
