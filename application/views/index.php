@@ -1,46 +1,26 @@
-<!DOCTYPE html>
-
-<html lang="ja">
-
 <head>
-
-    <title>未来コライ|miraikorai</title>
-
-
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="未来コライは、混声のバーバーショップを歌うカルテットグループです。">
-    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="format-detection" content="telephone=no" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/color_style.css" />
-    <link rel="stylesheet" href="css/header_footer.css" />
-    <link rel="stylesheet" href="css/top_style.css" />
-    <script src="js/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!--web icon-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <script type="text/javascript">
-        $(function(){
-            $(".loading").load("../loading.html");
-            $("header").load("../header.html");
-            $(".footer_bottom").load("../footer.html");
-        })
-    </script>
+    <?= link_tag("css/top_style.css")?>
 </head>
 
 <body>
     <div class="wrapper">
-      <div class="loading"></div>
-      <header></header>
 
-        <div class="header_logo_main"><img src="images/logo_main.png" alt="未来コライロゴ"></div>
+        <div class="header_logo_main">
+                <?= anchor('index', 
+                    img(array
+                        (   'src' => 'images/logo_main.png',
+                            'alt' => '未来コライロゴ'))
+                ) ?>
+        </div>
         <div class="main_top">
                 <p>Barbershop Quartet</p>
                 <h1>未来コライ</h1>
             <div class="main_top_img">
-                <img src="images/main_images/main_imags_01.png" alt="メインイメージ">
+                <?= anchor('index', 
+                    img(array
+                        (   'src' => 'images/main_images/main_imags_01.png',
+                            'alt' => 'メインイメージ'))
+                ) ?>
             </div>
         </div>
         <div class="main_contents">
@@ -83,11 +63,6 @@
             </div>
         </div><!--main_contets-->
 
-
-
-<div class="footer_bottom">
-
-</div>
     </div><!--wrapper-->
 </body>
 
