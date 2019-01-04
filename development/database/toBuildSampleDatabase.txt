@@ -1,0 +1,30 @@
+サンプルデータベース構築手順書
+
+前提：phpMyAdminがhttp://localhost:8888/phpMyAdmin/ にて動作中であること
+
+【データベースの構築】
+①development/database/Miraikorai_CREATE_TABLE.sqlの中身をコピーする。
+②phpMyAdminを開く。
+③SQLタブを開く。
+④「Run SQL query/queries on server “localhost”:」に、①にてコピーしたSQLを貼り付ける。
+⑤"Go"ボタンを押下する。
+　※いくつかWarningが出るが、確認不要。
+
+【サンプルデータの投入】
+①左ペイン「capricieux_miraikorai」を選択する。
+②「BLOG」を選択する。
+③右ペイン「Import」を選択する。
+④「ファイルを選択」を押下し、「capricieux_miraikorai_BLOG.csv」を選択する。
+⑤設定を確認・修正する。
+　◎：以下の通りとなっているか確認する
+　●：以下の通りに修正する
+　
+　◎「Character set of the file:」utf-8
+　●「Skip this number of queries (for SQL) starting from the first one: 」1
+　●「Enable foreign key checks」UNchecked
+　◎「Format：」CSV　
+
+⑥「Go」を押下し、全て無事終了していることを確認する。
+⑦他のテーブルについて、②から繰り返す。
+　なお、②で選択したテーブルと、④で選択するCSVファイルの名前は一致させること。
+
