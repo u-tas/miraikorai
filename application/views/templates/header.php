@@ -25,12 +25,16 @@
       <div class="header_top"></div>
       <nav class="header_nav">
           <div class="header_menu_sub">
-            <div class="header_logo"><a href="../index.html"><img src="../images/logo_mini.png" alt="未来コライロゴ"></a></div>
+            <div class="header_logo"><?= anchor('index', 
+                    img(array
+                        (   'src' => 'images/logo_mini.png',
+                            'alt' => '未来コライロゴ'))
+                    ) ?></div>
               <div class="header_menu_right">
 <div class="pc_only">
                   <div class="header_menu_lng">
                     <ul>
-                        <li class="header_contact"><a href="../postmail/index.html"><i class="lng_icon far fa-envelope fa-2x"></i><p> CONTACT</p></a></li>
+                        <li class="header_contact"><?= anchor('mail', '<i class="lng_icon far fa-envelope fa-2x"></i><p> CONTACT</p>') ?></li>
                         <li><i class="lng_icon fas fa-globe fa-2x"></i><p> LANGUAGE</p>
                             <ul>
                                 <li class="lang_select">JP</li>
@@ -45,10 +49,10 @@
           <div class="pc_only">
           <nav class="header_menu_main">
               <ul>
-                  <li class="hover_red"><a href="../about.html">ABOUT</a></li>
-                  <li class="hover_blue"><a href="../stage.html">STAGE</a></li>
-                  <li class="hover_green"><a href="../gallery.html">GALLERY</a></li>
-                  <li class="hover_yellow"><a href="../blog.html">BLOG</a></li>
+                  <li class="hover_red"><?= anchor('about', 'ABOUT') ?></li>
+                  <li class="hover_blue"><?= anchor('stage', 'STAGE') ?></li>
+                  <li class="hover_green"><?= anchor('gallery', 'GALLERY') ?></li>
+                  <li class="hover_yellow"><?= anchor('blog', 'BLOG') ?></li>
               </ul>
           </nav>
         </div>
@@ -65,11 +69,11 @@
                <label class="close-menu" for="checked"></label>
                <nav class="drawer-menu">
                  <ul>
-                     <li><a href="../about.html">ABOUT</a></li>
-                     <li><a href="../stage.html">STAGE</a></li>
-                     <li><a href="../gallery.html">GALLERY</a></li>
-                     <li><a href="../blog.html">BLOG</a></li>
-                     <li><a href="../postmail/index.html">CONTACT</a></li>
+                     <li><?= anchor('about', 'ABOUT') ?></li>
+                     <li><?= anchor('stage', 'STAGE') ?></li>
+                     <li><?= anchor('gallery', 'GALLERY') ?></li>
+                     <li><?= anchor('blog', 'BLOG') ?></li>
+                     <li><?= anchor('mail', 'CONTACT') ?></li>
                      <li><a href="" class="langEng">LANGUAGE JP<i class="fas fa-long-arrow-alt-right"></i>EN</a></li>
                  </ul>
             <div class="sns_sp">
