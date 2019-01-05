@@ -42,85 +42,27 @@
               <h1 class="pege_title">BLOG</h1>
           </div>
           <ul class="blog_list">
+              <?php foreach ($articles as $article) :?>
                 <li>
-                  <a href="blog.html">
+                  <a href="<?= base_url("index.php/blog/".$article['id']) ?>"> <!--index.php-->
                 <div class="blog_cap">
-                    <div class="blog_title">ブログタイトル</div>
+                    <div class="blog_title"><?=$article['title']?></div>
                     <div class="member_part_bottom">
                      <div class="member_part_box_left bg_red"></div>
                      <div class="member_part_center bg_red"></div>
                      <div class="member_part_box_right bg_red"></div>
                     </div>
-                    <p class="blog_date">12-18-2018</p>
+                    <p class="blog_date"><?= substr($article['publishment_date'], 0, 10) ?></p>
                 </div>
                 <div class="box_main gradation_1">
                 <div class="blog_image">
                     <div class="overlay bg_red"></div>
-                    <img src="images/blog.png">
+                    <?= img("img/blog/".$article['image_url'])?>
                 </div>
                 </div>
               </a>
                 </li>
-
-                <li>
-                  <a href="blog.html">
-                  <div class="blog_cap">
-                      <div class="blog_title">ブログタイトル</div>
-                      <div class="member_part_bottom">
-                       <div class="member_part_box_left bg_blue"></div>
-                       <div class="member_part_center bg_blue"></div>
-                       <div class="member_part_box_right bg_blue"></div>
-                      </div>
-                      <p class="blog_date">12-18-2018</p>
-                  </div>
-                  <div class="box_main gradation_1">
-                  <div class="blog_image">
-                      <div class="overlay bg_blue"></div>
-                      <img src="images/blog.png">
-                  </div>
-                  </div>
-                </a>
-                </li>
-
-                <li>
-                  <a href="blog.html">
-                  <div class="blog_cap">
-                      <div class="blog_title">ブログタイトル</div>
-                      <div class="member_part_bottom">
-                       <div class="member_part_box_left bg_green"></div>
-                       <div class="member_part_center bg_green"></div>
-                       <div class="member_part_box_right bg_green"></div>
-                      </div>
-                      <p class="blog_date">12-18-2018</p>
-                  </div>
-                  <div class="box_main gradation_1">
-                  <div class="blog_image">
-                      <div class="overlay bg_green"></div>
-                      <img src="images/blog.png">
-                  </div>
-                  </div>
-                </a>
-                </li>
-
-                <li>
-                  <a href="blog.html">
-                  <div class="blog_cap">
-                      <div class="blog_title">ながーーーーーーーーーーーーーいタイトル</div>
-                      <div class="member_part_bottom">
-                       <div class="member_part_box_left bg_yellow"></div>
-                       <div class="member_part_center bg_yellow"></div>
-                       <div class="member_part_box_right bg_yellow"></div>
-                      </div>
-                      <p class="blog_date">12-18-2018</p>
-                  </div>
-                  <div class="box_main gradation_1">
-                  <div class="blog_image">
-                      <div class="overlay bg_yellow"></div>
-                      <img src="images/blog.png">
-                  </div>
-                  </div>
-                </a>
-                </li>
+             <?php endforeach;?>
             </ul>
         </div>
         <!--main_contets-->

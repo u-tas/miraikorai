@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['index'] = 'index/view';
 $route['about'] = 'about/view';
+$route['blog/(:num)'] = 'blog/view/$1';
 $route['blog'] = 'blog/view';
 $route['stage'] = 'stage/view';
 $route['mail'] = 'mail/view';

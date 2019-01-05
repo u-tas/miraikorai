@@ -1,26 +1,31 @@
 <?php
 class Blog extends CI_Controller {
-    public function view($kiji_no = NULL)
+    
+    public function __construct() {
+        
+        parent::__construct();
+        $this->load->model("Blog_model");
+        
+    }
+    
+    public function view(int $blog_id = NULL)
     {
         $this->load->helper('html');
         $this->load->helper('url');
         
-        if ( ! file_exists(APPPATH.'views/about/about.php'))
+        if ($blog_id === null) 
         {
-            // おっと、そのページはありません！
-            show_404();
-        }
-        
-        if ( $kiji_no === null) 
-        {
-            // 記事最新XX件の概要を取ってくる処理を入れる
-            $this->load->view('templates/header');
-            $this->load->view('blog/blog_list');
+            $data['articles'] = $this->Blog_model->get_blog();
+            $data['title'] = "blog";
+            $this->load->view('templates/header',$data);
+            $this->load->view('blog/blog_list',$data);
             $this->load->view('templates/footer');
         } else {
-            // 記事の内容を取ってくる処理を入れる
-            $this->load->view('templates/header');
-            $this->load->view('blog/blog_list');
+            $data['article'] = $this->Blog_model->get_article($blog_id);
+            $data['latest_posts'] = $this->Blog_model->get_blog();
+            $data['title'] = "blog - ".$data['article'][0]['title'];
+            $this->load->view('templates/header',$data);
+            $this->load->view('blog/blog',$data);
             $this->load->view('templates/footer');            
         }
     }

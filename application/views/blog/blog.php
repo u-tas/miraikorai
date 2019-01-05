@@ -39,26 +39,25 @@
             <div class="title_contents bg_yellow">
                 <h1 class="pege_title">BLOG</h1>
             </div>
-
-            <div class="blog_title yellow">ブログタイトル</div>
+            <div class="blog_title yellow"><?=$article[0]['title']?></div>
             <div class="member_part_bottom">
              <div class="member_part_box_left bg_yellow"></div>
              <div class="member_part_center bg_yellow"></div>
              <div class="member_part_box_right bg_yellow"></div>
             </div>
-            <p class="blog_date yellow">12-18-2018</p>
+            <p class="blog_date yellow"><?=$article[0]['publishment_date']?></p>
 
             <div class="blog_main">
-             <div class="blog_mainPhoto"><img src="images/blog_images/blog_20181221.png"></div>
+                <div class="blog_mainPhoto"><?= img("img/blog/".$article[0]['image_url']) ?></div>
 
               <div class="blog_text">
-               <p>誰は偶然もっとその話共についてののために読むたで。<br><br>
-                もっとも今を落第観もはなはだこの講義うれでもを死んて込まんがも盲従感ずるならたで、そうには当てるたでしょなない。<br>
-                道具にしありものはなお今で至極ないたで。けっして大森さんに存在他人ますます立証にきめませ諸君そんな詞私か教育をという不奨励ませでますんて、その今も私か秋刀魚学校で云うて、岡田さんののを中学の私をきっとお話と出るとあなた別のお徹底を与えように初めてご使用をいうですませと、何だかいよいよ通知にしでて切らう事をするたです。<br><br>
-                誰は偶然もっとその話共についてののために読むたで。
-              </p>
+                  <?=$article[0]['content'] ?>
+                  <!--<?php
+                      for ($count = 1; $count <= count($article)-1; $count++) {
+                          echo img("img/blog/".$article[$count]['image_url']);
+                  }?>-->
              </div>
-           </div>
+            </div>
 
 <div class="title_sub_contents">
     <h2 class="pege_title_sub yellow">Back number</h2>
@@ -67,58 +66,31 @@
 </div>
     <div class="backnumber">
        <div class="backnumber_photo">
+           <?php $css_class = array
+                   ( 0 => 'bg_red',
+                    1 => 'bg_blue',
+                    2 => 'bg_green',
+                    3 => 'bg_yellow'); 
+            ?>
            <ul>
+               <?php $count = 0;?>
+               <?php foreach ($latest_posts as $latest_post) :?>
              <li>
-               <a href="#">
+                 <a href="<?= base_url("index.php/blog/".$latest_post['id']) ?>"> <!--index.php-->
                <figure>
-                 <img src="images/blog.png" alt="演奏会チラシ">
-                 <div class="overlay bg_red"></div>
-                 <figcaption class="bg_red">
-                   <h3>ぶろぐだよー</h3>
-                   <p>10-24-2018</p>
+                   <?= img("img/blog/".$latest_post['image_url']) ?>
+                 <div class="<?= "overlay ".$css_class[$count%count($css_class)]?>"></div>
+                 <figcaption class="<?= $css_class[$count%count($css_class)]?>">
+                   <h3><?=$latest_post['title'] ?></h3>
+                   <p><?=$latest_post['publishment_date'] ?></p>
                  </figcaption>
                </figure>
-               </a>
-             </li>
-             <li>
-               <a href="#">
-               <figure>
-                 <img src="images/blog.png" alt="演奏会チラシ">
-                 <div class="overlay bg_blue"></div>
-                 <figcaption class="bg_blue">
-                   <h3>ぶろぐかきましたよー</h3>
-                   <p>10-24-2018</p>
-                 </figcaption>
-               </figure>
-               </a>
-             </li>
-             <li>
-               <a href="#">
-               <figure>
-                 <img src="images/blog.png" alt="演奏会チラシ">
-                 <div class="overlay bg_green"></div>
-                 <figcaption class="bg_green">
-                   <h3>ぶろぐかいているんだよー</h3>
-                   <p>10-24-2018</p>
-                 </figcaption>
-               </figure>
-               </a>
-             </li>
-             <li>
-               <a href="#">
-               <figure>
-                 <img src="images/blog.png" alt="演奏会チラシ">
-                 <div class="overlay bg_yellow"></div>
-                 <figcaption class="bg_yellow">
-                   <h3>ながーーーーーーーーーいたいとるだよーーーーーーー</h3>
-                   <p>10-24-2018</p>
-                 </figcaption>
-               </figure>
-               </a>
-             </li>
+                 </a>
+                 </li>
+                <?php $count++; endforeach;?>
            </ul>
        </div>
-       <div class="backnumber_moer"><a href="blog_list.html">MORE</a></div>
+        <div class="backnumber_moer"><?= anchor("blog/", "MORE") ?></div>
     </div>
         </div>
         <!--main_contets-->
