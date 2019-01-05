@@ -11,15 +11,13 @@ class Index extends CI_Controller {
     }
 
     public function view() {
-        $data['information'] = $this->Information_model->get_information();
-        $this->load->view('index', $data);
-
         $this->load->helper('html');
         $this->load->helper('url');
 
         $data['title'] = '';
+        $data['information'] = $this->Information_model->get_information();
         $this->load->view('templates/header', $data);
-        $this->load->view('index');
+        $this->load->view('index', $data);
         $this->load->view('templates/footer');
     }
 }
