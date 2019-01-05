@@ -10,7 +10,11 @@
             <div class="title_contents bg_red">
                 <h1 class="pege_title">ABOUT</h1>
             </div>
-            <div class="header_logo_main"><img src="images/logo_main.png" alt="未来コライロゴ"></div>
+            <div class="header_logo_main">
+                <?= img(array
+                        (   'src' => 'images/logo_main.png',
+                            'alt' => '未来コライロゴ'))?>
+            </div>
             <div class="about_text">
             <p class="pc_only">
               未来コライは、混声のバーバーショップを歌うカルテットグループです。<br>
@@ -51,7 +55,11 @@
                   <p class="member_name red">新谷 祐美子</p>
                   <p class="member_nickname red">ゆみりん</p>
                   </div>
-                <div class="item about_member_image"><?= img("images/member_01.png")?></div>
+                <div class="item about_member_image">
+                    <?= img(array
+                        (   'src' => 'images/member_01.png',
+                            'alt' => 'コラミィ_01'))?>
+                </div>
               <div class="item">
                 <table class="member_text">
                   <tr>
@@ -176,7 +184,11 @@
                   <p class="member_name green">鈴木 悠太</p>
                   <p class="member_nickname green">ゆーたす</p>
                   </div>
-              <div class="item about_member_image"><img src="images/member_03.png" alt="コラミィ_01"></div>
+                <div class="item about_member_image">
+                    <?= img(array
+                        (   'src' => 'images/member_03.png',
+                            'alt' => 'コラミィ_03'))?>
+                </div>
               <div class="item">
                 <table class="member_text">
                   <tr>
@@ -237,7 +249,11 @@
                   <p class="member_name yellow">福益 一司</p>
                   <p class="member_nickname yellow">ふくます</p>
                   </div>
-              <div class="item about_member_image"><img src="images/member_04.png" alt="コラミィ_01"></div>
+              <div class="item about_member_image">
+                  <?= img(array
+                        (   'src' => 'images/member_04.png',
+                            'alt' => 'コラミィ_04'))?>
+              </div>
               <div class="item">
                 <table class="member_text">
                   <tr>
