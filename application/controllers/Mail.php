@@ -25,6 +25,14 @@ $this->form_validation->set_rules('text', 'お問い合わせ内容', 'trim|requ
                 $this->load->view('templates/header',$data);
                 $this->load->view('mail/formsuccess',$data);
                 $this->load->view('templates/footer');
+                
+                $this->load->library('email');
+//              $this->email->from($data['mail'], mb_encode_mimeheader($data['name'], 'UTF-8', 'B'));
+                $this->email->to('tomosuko.3612@gmail.com');
+                $this->email->subject('お問い合わせを受け付けました');
+//              $this->email->message($message);
+                // メール送信
+                $this->email->send();
             }
     }
     

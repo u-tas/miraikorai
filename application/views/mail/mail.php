@@ -52,7 +52,7 @@
 </table>
 
 <div class="btn">
-	  <input type="submit" value="内容を確認する">
+	  <input type="submit" value="送信する">
 </p>
 </form>
 </div>
