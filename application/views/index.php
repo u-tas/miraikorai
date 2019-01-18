@@ -30,7 +30,7 @@
                 <table>
                     <?php foreach ($information as $information_item): ?>
                     <tr>
-                        <td class="top_info_date"><?= substr($information_item['publishment_date'], 0, 10) ?></td>
+                        <td class="top_info_date"><?= substr($information_item['publishment_date'], 5, 5)."-".substr($information_item['publishment_date'], 0, 4) ?></td>
                         <td class="top_info_mark pc_only">◆</td>
                         <td class="top_info_text hover_yellow"><?=$information_item['title']?>
                         <?=$information_item['detail']?></td>
@@ -38,7 +38,7 @@
                     <?php endforeach;?>
                 </table>
 
-                <div class="top_info_text_moer"><a href="#">MORE</a></div>
+<!--                <div class="top_info_text_moer"><a href="#">MORE</a></div>-->
             </div>
             <div class="pc_only">
               <div class="sns">
