@@ -18,7 +18,7 @@
              <div class="member_part_center bg_yellow"></div>
              <div class="member_part_box_right bg_yellow"></div>
             </div>
-            <p class="blog_date yellow"><?=$article[0]['publishment_date']?></p>
+            <p class="blog_date yellow"><?= substr($article[0]['publishment_date'], 5, 5)."-".substr($article[0]['publishment_date'], 0, 4)?></p>
 
             <div class="blog_main">
                 <div class="blog_mainPhoto"><?= img("img/blog/".$article[0]['image_url']) ?></div>
@@ -55,7 +55,7 @@
                  <div class="<?= "overlay ".$css_class[$count%count($css_class)]?>"></div>
                  <figcaption class="<?= $css_class[$count%count($css_class)]?>">
                    <h3><?=$latest_post['title'] ?></h3>
-                   <p><?=$latest_post['publishment_date'] ?></p>
+                   <p><?=substr($latest_post['publishment_date'], 5, 5)."-".substr($latest_post['publishment_date'], 0, 4) ?></p>
                  </figcaption>
                </figure>
                  </a>
