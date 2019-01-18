@@ -9,24 +9,28 @@ class Blog extends CI_Controller {
         $this->load->model("Blog_model");
     }
     
-    public function view(int $blog_id = NULL)
+    // 記事表示用
+    public function index(int $blog_id = NULL)
     {        
-        if ($blog_id === null) 
-        {
-            $data['title'] = "blog";
-            $this->load->view('templates/header',$data);
-            
-            $data['articles'] = $this->Blog_model->get_blog();
-            $this->load->view('blog/blog_list',$data);
-            $this->load->view('templates/footer');
-        } else {
-            $data['article'] = $this->Blog_model->get_article($blog_id);
-            $data['latest_posts'] = $this->Blog_model->get_blog();
-            $data['title'] = "blog - ".$data['article'][0]['title'];
-            $this->load->view('templates/header',$data);
-            $this->load->view('blog/blog',$data);
-            $this->load->view('templates/footer');            
-        }
+        // 指示無い時は最新記事を、指示有る時は、指示された記事を取得
+        $data['article'] = $this->Blog_model->get_article($blog_id);
+        $data['latest_posts'] = $this->Blog_model->get_list(1);
+        $data['title'] = "blog - ".$data['article'][0]['title'];
+        
+        $this->load->view('templates/header',$data);
+        $this->load->view('blog/blog',$data);
+        $this->load->view('templates/footer');            
+    }
+    
+    // list画面用
+    public function list(int $start = 1) 
+    {
+        $data['title'] = "blog";
+        $this->load->view('templates/header',$data);
+
+        $data['articles'] = $this->Blog_model->get_list($start);
+        $this->load->view('blog/blog_list',$data);
+        $this->load->view('templates/footer');        
     }
 }
 
