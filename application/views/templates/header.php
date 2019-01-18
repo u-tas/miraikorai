@@ -3,7 +3,7 @@
 <html lang="ja">
 
 <head>
-    <title>未来コライ|Miraikorai|<?= $title ?> </title>
+    <title>未来コライ | miraikorai<?php if($title != null) {echo " | ".$title;} ?> </title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="未来コライは、混声のバーバーショップを歌うカルテットグループです。">
@@ -13,7 +13,7 @@
     <?= link_tag("css/style.css")?>
     <?= link_tag("css/color_style.css")?>
     <?= link_tag("css/header_footer.css")?>
-    <script src="<?= base_url("js/language.js")?>"></script>
+<!--    <script src="<?= base_url("js/language.js")?>"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--web icon-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
@@ -35,12 +35,12 @@
                   <div class="header_menu_lng">
                     <ul>
                         <li class="header_contact"><?= anchor('mail', '<i class="lng_icon far fa-envelope fa-2x"></i><p> CONTACT</p>') ?></li>
-                        <li><i class="lng_icon fas fa-globe fa-2x"></i><p> LANGUAGE</p>
+<!--                        <li><i class="lng_icon fas fa-globe fa-2x"></i><p> LANGUAGE</p>
                             <ul>
                                 <li class="lang_select">JP</li>
                                 <li><a href="" class="langEng">EN</a></li>
                             </ul>
-                        </li>
+                        </li>-->
                     </ul>
                   </div>
                 </div>
@@ -74,7 +74,7 @@
                      <li><?= anchor('gallery', 'GALLERY') ?></li>
                      <li><?= anchor('blog', 'BLOG') ?></li>
                      <li><?= anchor('mail', 'CONTACT') ?></li>
-                     <li><a href="" class="langEng">LANGUAGE JP<i class="fas fa-long-arrow-alt-right"></i>EN</a></li>
+<!--                     <li><a href="" class="langEng">LANGUAGE JP<i class="fas fa-long-arrow-alt-right"></i>EN</a></li>-->
                  </ul>
             <div class="sns_sp">
                         <ul>
