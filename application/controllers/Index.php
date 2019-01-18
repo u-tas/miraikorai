@@ -9,7 +9,7 @@ class Index extends CI_Controller {
         $this->load->model("Information_model");
     }
 
-    public function view() 
+    public function index() 
     {
         $data['title'] = '';
         $data['information'] = $this->Information_model->get_information();

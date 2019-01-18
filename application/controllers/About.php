@@ -9,12 +9,12 @@ class About extends CI_Controller {
         $this->load->model("History_model");        
     }
     
-    public function view()
+    public function index()
     {        
-        $data['title'] = 'about';
-        $data['history'] = $this->History_model->get_history();
-        
+        $data['title'] = 'about';        
         $this->load->view('templates/header',$data);
+        
+        $data['history'] = $this->History_model->get_history();
         $this->load->view('about/about',$data);
         $this->load->view('templates/footer');
     }

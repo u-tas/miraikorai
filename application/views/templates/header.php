@@ -34,7 +34,7 @@
 <div class="pc_only">
                   <div class="header_menu_lng">
                     <ul>
-                        <li class="header_contact"><?= anchor('mail', '<i class="lng_icon far fa-envelope fa-2x"></i><p> CONTACT</p>') ?></li>
+                        <li class="header_contact"><?= anchor('contact', '<i class="lng_icon far fa-envelope fa-2x"></i><p> CONTACT</p>') ?></li>
 <!--                        <li><i class="lng_icon fas fa-globe fa-2x"></i><p> LANGUAGE</p>
                             <ul>
                                 <li class="lang_select">JP</li>
@@ -73,7 +73,7 @@
                      <li><?= anchor('stage', 'STAGE') ?></li>
                      <li><?= anchor('gallery', 'GALLERY') ?></li>
                      <li><?= anchor('blog', 'BLOG') ?></li>
-                     <li><?= anchor('mail', 'CONTACT') ?></li>
+                     <li><?= anchor('contact', 'CONTACT') ?></li>
 <!--                     <li><a href="" class="langEng">LANGUAGE JP<i class="fas fa-long-arrow-alt-right"></i>EN</a></li>-->
                  </ul>
             <div class="sns_sp">

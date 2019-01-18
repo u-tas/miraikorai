@@ -9,7 +9,7 @@ class Stage extends CI_Controller {
         $this->load->model("Information_model");
     }
     
-    public function view()
+    public function index()
     {
         $data['title'] = "stage";
         $this->load->view('templates/header',$data);

@@ -13,9 +13,10 @@ class Blog extends CI_Controller {
     {        
         if ($blog_id === null) 
         {
-            $data['articles'] = $this->Blog_model->get_blog();
             $data['title'] = "blog";
             $this->load->view('templates/header',$data);
+            
+            $data['articles'] = $this->Blog_model->get_blog();
             $this->load->view('blog/blog_list',$data);
             $this->load->view('templates/footer');
         } else {
