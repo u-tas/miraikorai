@@ -1,18 +1,16 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Blog extends CI_Controller {
     
-    public function __construct() {
-        
+    public function __construct() 
+    {
         parent::__construct();
         $this->load->model("Blog_model");
-        
     }
     
     public function view(int $blog_id = NULL)
-    {
-        $this->load->helper('html');
-        $this->load->helper('url');
-        
+    {        
         if ($blog_id === null) 
         {
             $data['articles'] = $this->Blog_model->get_blog();

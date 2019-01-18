@@ -10,10 +10,7 @@ class About extends CI_Controller {
     }
     
     public function view()
-    {
-        $this->load->helper('html');
-        $this->load->helper('url');
-        
+    {        
         $data['title'] = 'about';
         $data['history'] = $this->History_model->get_history();
         

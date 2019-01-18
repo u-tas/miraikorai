@@ -1,5 +1,4 @@
 <?php
-
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Index extends CI_Controller {
@@ -10,10 +9,8 @@ class Index extends CI_Controller {
         $this->load->model("Information_model");
     }
 
-    public function view() {
-        $this->load->helper('html');
-        $this->load->helper('url');
-
+    public function view() 
+    {
         $data['title'] = '';
         $data['information'] = $this->Information_model->get_information();
         $this->load->view('templates/header', $data);
