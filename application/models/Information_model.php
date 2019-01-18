@@ -14,6 +14,7 @@ class Information_model extends CI_Model {
     public function get_information($count = self::default_count) {
         $this->db->limit($count)->get_compiled_select(self::table_name,false);
         $this->db->order_by("publishment_date", "desc");
+        $this->db->where("publishment_date <=", date("Y-m-d H:i:s"));
         return $this->db->get()->result_array();
     }
 
