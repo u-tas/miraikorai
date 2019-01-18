@@ -33,7 +33,7 @@
             </div>
 
 <div class="title_sub_contents">
-    <h2 class="pege_title_sub yellow">Back number</h2>
+    <h2 class="pege_title_sub yellow">Latest posts</h2>
     <div class="title_sub_border_bottom bg_yellow">
     </div>
 </div>
@@ -49,7 +49,7 @@
                <?php $count = 0;?>
                <?php foreach ($latest_posts as $latest_post) :?>
              <li>
-                 <a href="<?= base_url("index.php/blog/".$latest_post['id']) ?>"> <!--index.php-->
+                 <a href="<?= base_url("blog/".$latest_post['id']) ?>"> <!--index.php-->
                <figure>
                    <?= img("img/blog/".$latest_post['image_url']) ?>
                  <div class="<?= "overlay ".$css_class[$count%count($css_class)]?>"></div>
@@ -63,7 +63,7 @@
                 <?php $count++; endforeach;?>
            </ul>
        </div>
-        <div class="backnumber_moer"><?= anchor("blog/", "MORE") ?></div>
+        <div class="backnumber_moer"><?= anchor("blog/list", "MORE") ?></div>
     </div>
         </div>
         <!--main_contets-->
