@@ -8,7 +8,7 @@ class Information_model extends CI_Model {
         $this->load->database();
     }
 
-    const table_name = "information";
+    const table_name = "INFORMATION";
     const default_count = 4;
 
     public function get_information($count = self::default_count) {

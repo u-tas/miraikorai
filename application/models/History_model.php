@@ -7,7 +7,7 @@ class History_model extends CI_Model {
         $this->load->database();
     }
 
-    const table_name = "history";
+    const table_name = "HISTORY";
 
     public function get_history() {
         $this->db->get_compiled_select(self::table_name,false);
