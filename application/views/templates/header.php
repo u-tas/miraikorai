@@ -25,7 +25,7 @@
       <div class="header_top"></div>
       <nav class="header_nav">
           <div class="header_menu_sub">
-            <div class="header_logo"><?= anchor('index', 
+            <div class="header_logo"><?= anchor('/', 
                     img(array
                         (   'src' => 'images/logo_mini.png',
                             'alt' => '未来コライロゴ'))
