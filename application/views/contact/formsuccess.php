@@ -14,7 +14,7 @@
 
  <h3>あなたのフォームは送信成功しました！</h3>
 
-<p><?php echo anchor('mail', 'もういっかい！'); ?></p>
+<p><?php echo anchor('contact', 'もういっかい！'); ?></p>
 
         </div><!--main_contets-->
     </div><!--wrapper-->

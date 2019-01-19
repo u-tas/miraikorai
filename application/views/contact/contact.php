@@ -13,7 +13,7 @@
 				</div>
                       
                             
-        <?php echo form_open('mail'); ?>
+        <?php echo form_open('contact'); ?>
 <div id="form-tbl">
 <table summary="問合せフォーム" id="form">
     <tr>
