@@ -40,8 +40,8 @@
                 <h1 class="pege_title">STAGE</h1>
             </div>
 
-            <div class="stage_title blue">演奏会タイトル</div>
-            <div class="member_part_bottom">
+            <div class="stage_title blue">Coming Soon</div>
+<!--            <div class="member_part_bottom">
              <div class="member_part_box_left bg_blue"></div>
              <div class="member_part_center bg_blue"></div>
              <div class="member_part_box_right bg_blue"></div>
@@ -118,7 +118,7 @@
           <p class="stage_text_price">入場料<span>1000</span>円(自由席)</p>
           <div class="button"><a href="#">予約する</a></div>
 </div>
-</div><!-- steag_contents -->
+</div> steag_contents 
 <div class="title_sub_contents">
     <h2 class="pege_title_sub blue">Back number</h2>
     <div class="title_sub_border_bottom bg_blue">
@@ -179,7 +179,7 @@
        </div>
        <div class="backnumber_moer"><a href="stage_list.html">MORE</a></div>
     </div>
-    <div class="button"><a href="#">過去の演奏動画はこちら</a></div>
+    <div class="button"><a href="#">過去の演奏動画はこちら</a></div>-->
         </div>
         <!--main_contets-->
 
