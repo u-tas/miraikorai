@@ -18,7 +18,7 @@
             <div class="main_top_img">
                 <?= anchor('index', 
                     img(array
-                        (   'src' => 'images/main_images/main_imags_01.png',
+                        (   'src' => 'images/index_images/index_01.png',
                             'alt' => 'メインイメージ'))
                 ) ?>
             </div>
