@@ -57,7 +57,7 @@
                   </div>
                 <div class="item about_member_image">
                     <?= img(array
-                        (   'src' => 'images/member_01.png',
+                        (   'src' => 'images/about_images/member_01.png',
                             'alt' => 'コラミィ_01'))?>
                 </div>
               <div class="item">
@@ -122,7 +122,7 @@
                   </div>
               <div class="item about_member_image">
                 <?= img(array
-                        (   'src' => 'images/member_02.png',
+                        (   'src' => 'images/about_images/member_02.png',
                             'alt' => 'コラミィ_02'))?></div>
               <div class="item">
                 <table class="member_text">
@@ -186,7 +186,7 @@
                   </div>
                 <div class="item about_member_image">
                     <?= img(array
-                        (   'src' => 'images/member_03.png',
+                        (   'src' => 'images/about_images/member_03.png',
                             'alt' => 'コラミィ_03'))?>
                 </div>
               <div class="item">
@@ -251,7 +251,7 @@
                   </div>
               <div class="item about_member_image">
                   <?= img(array
-                        (   'src' => 'images/member_04.png',
+                        (   'src' => 'images/about_images/member_04.png',
                             'alt' => 'コラミィ_04'))?>
               </div>
               <div class="item">

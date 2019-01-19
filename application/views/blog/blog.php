@@ -21,13 +21,13 @@
             <p class="blog_date yellow"><?= substr($article[0]['publishment_date'], 5, 5)."-".substr($article[0]['publishment_date'], 0, 4)?></p>
 
             <div class="blog_main">
-                <div class="blog_mainPhoto"><?= img("img/blog/".$article[0]['image_url']) ?></div>
+                <div class="blog_mainPhoto"><?= img("images/blog_images/".$article[0]['image_url']) ?></div>
 
               <div class="blog_text">
-                  <?=$article[0]['content'] ?>
+                  <?= nl2br($article[0]['content']) ?>
                   <!--<?php
                       for ($count = 1; $count <= count($article)-1; $count++) {
-                          echo img("img/blog/".$article[$count]['image_url']);
+                          echo img("images/blog_images/".$article[$count]['image_url']);
                   }?>-->
              </div>
             </div>
@@ -49,9 +49,9 @@
                <?php $count = 0;?>
                <?php foreach ($latest_posts as $latest_post) :?>
              <li>
-                 <a href="<?= base_url("blog/".$latest_post['id']) ?>"> <!--index.php-->
+                 <a href="<?= base_url("blog/".$latest_post['id']) ?>">
                <figure>
-                   <?= img("img/blog/".$latest_post['image_url']) ?>
+                   <?= img("images/blog_images/".$latest_post['image_url']) ?>
                  <div class="<?= "overlay ".$css_class[$count%count($css_class)]?>"></div>
                  <figcaption class="<?= $css_class[$count%count($css_class)]?>">
                    <h3><?=$latest_post['title'] ?></h3>

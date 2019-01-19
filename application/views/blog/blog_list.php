@@ -35,7 +35,7 @@
                 <div class="box_main gradation_1">
                 <div class="blog_image">
                     <div class="overlay <?=$css_class[$count%count($css_class)]?>"></div>
-                    <?= img("img/blog/".$article['image_url'])?>
+                    <?= img("images/blog_images/".$article['image_url'])?>
                 </div>
                 </div>
               </a>
