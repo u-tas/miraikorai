@@ -23,7 +23,7 @@
 .main_top_img {
     margin: 0 auto;
     width: 80%;
-    /*background-color: #91a3c1;*/
+    text-align: center;
 }
 .main_top_img img{
   margin: 0 auto;
@@ -171,7 +171,7 @@ table{
     .sns_qr_sp ul li{
         width: 90px;
         height: 90px;
-        margin-bottom: 60px;
+        margin:50px auto;
         text-align: center;
         transform:rotate(-45deg);
     }

@@ -12,9 +12,9 @@
 						<h1 class="pege_title">CONTACT</h1>
 				</div>
 
- <h3>あなたのフォームは送信成功しました！</h3>
+ <h3>送信成功しました！</h3>
+ <p>返信に時間がかかる場合がございます。ご了承ください。</p>
 
-<p><?php echo anchor('contact', 'もういっかい！'); ?></p>
 
         </div><!--main_contets-->
     </div><!--wrapper-->

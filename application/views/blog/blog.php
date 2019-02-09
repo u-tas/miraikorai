@@ -63,7 +63,9 @@
                 <?php $count++; endforeach;?>
            </ul>
        </div>
-        <div class="backnumber_moer"><?= anchor("blog/list", "MORE") ?></div>
+<!--        <div class="backnumber_moer">
+                //<?= anchor("blog/list", "MORE") ?>
+</div>-->
     </div>
         </div>
         <!--main_contets-->

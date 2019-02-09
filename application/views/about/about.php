@@ -144,7 +144,7 @@
                     <tr>
                      <th class="blue">生息地</th>
                      <td class="table_icon blue">◆</td>
-                     <td>113番どうろ</td>
+                     <td>吉祥寺</td>
                     </tr>
                     <tr>
                      <th class="blue">性格</th>

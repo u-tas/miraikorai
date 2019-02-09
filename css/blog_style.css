@@ -84,8 +84,8 @@ figure {
 }
 figure img{
   transform: rotate(45deg);
-  width: 256px;
-  margin: -39px;
+    width: 484px;
+    margin: -51px -157px;
   object-fit: cover;
 }
 .overlay{

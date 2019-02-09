@@ -31,9 +31,15 @@ class Contact extends CI_Controller {
             $this->load->view('templates/footer');
 
             $this->load->library('email');
+            $config['protocol'] = 'sendmail';
+            $config['mailpath'] = '/usr/sbin/sendmail';
+            $config['crlf'] = '\r\n';
+            $config['newline'] = '\r\n';
+            $this->email->initialize($config);
 //              $this->email->from($data['mail'], mb_encode_mimeheader($data['name'], 'UTF-8', 'B'));
             $this->email->to('tomosuko.3612@gmail.com');
             $this->email->subject('お問い合わせを受け付けました');
+            $this->email->message("test");
 //              $this->email->message($message);
             // メール送信
             $this->email->send();
