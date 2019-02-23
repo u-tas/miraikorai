@@ -36,7 +36,7 @@ class Contact extends CI_Controller {
             $config['crlf'] = '\r\n';
             $config['newline'] = '\r\n';
             $this->email->initialize($config);
-            $this->email->from("$email", $username);
+            $this->email->from($this->input->post('email'));
             $this->email->to('tomosuko.3612@gmail.com');
             $this->email->subject('お問い合わせを受け付けました');
             $this->email->message($this->input->post('text'));
