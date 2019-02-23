@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 
 <head>
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@miraikorai" />
+    <meta property="og:url" content="https://miraikorai.com/blog" />
+    <meta property="og:title" content="<?=$article[0]['title']?>" />
+    <meta property="og:description" content="<?= nl2br($article[0]['content']) ?>" />
+    <meta property="og:image" content="../../images/logo_main.png" />
+    
+    
+    
+    
+    
+    
     <?= link_tag("css/blog_style.css")?>
+    
 </head>
 
 <body>

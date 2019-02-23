@@ -11,8 +11,8 @@
 				<div class="title_contents bg_navy">
 						<h1 class="pege_title">CONTACT</h1>
 				</div>
-                      
                             
+                                                
         <?php echo form_open('contact'); ?>
 <div id="form-tbl">
 <table summary="問合せフォーム" id="form">

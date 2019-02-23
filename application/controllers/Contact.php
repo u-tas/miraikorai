@@ -14,7 +14,7 @@ class Contact extends CI_Controller {
         
         $this->load->helper('form');
         $this->load->library('form_validation');
-        
+        //バリデーション
         $this->form_validation->set_rules('username', 'お名前', 'trim|required');
         $this->form_validation->set_rules('email', 'メールアドレス', 'trim|required|valid_email');
         $this->form_validation->set_rules('email2', 'メールアドレス確認', 'trim|required|matches[email]');
@@ -36,13 +36,16 @@ class Contact extends CI_Controller {
             $config['crlf'] = '\r\n';
             $config['newline'] = '\r\n';
             $this->email->initialize($config);
-//              $this->email->from($data['mail'], mb_encode_mimeheader($data['name'], 'UTF-8', 'B'));
+            $this->email->from("$email", $username);
             $this->email->to('tomosuko.3612@gmail.com');
             $this->email->subject('お問い合わせを受け付けました');
-            $this->email->message("test");
+            $this->email->message("text");
 //              $this->email->message($message);
             // メール送信
             $this->email->send();
+            
+            echo $this->email->print_debugger();
+            
         }
     }
     
