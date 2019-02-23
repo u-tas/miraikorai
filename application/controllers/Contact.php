@@ -39,7 +39,7 @@ class Contact extends CI_Controller {
             $this->email->from("$email", $username);
             $this->email->to('tomosuko.3612@gmail.com');
             $this->email->subject('お問い合わせを受け付けました');
-            $this->email->message("text");
+            $this->email->message($this->input->post('text'));
 //              $this->email->message($message);
             // メール送信
             $this->email->send();
