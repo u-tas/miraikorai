@@ -11,9 +11,12 @@
 				<div class="title_contents bg_navy">
 						<h1 class="pege_title">CONTACT</h1>
 				</div>
-
- <h3>送信成功しました！</h3>
- <p>返信に時間がかかる場合がございます。ご了承ください。</p>
+    <p>送信が完了しました。</p>
+    <p>返信に時間がかかる場合がございます。ご了承ください。</p><br/><br/><br/>
+ 
+    <div class="btn">
+        <input type="submit" value="TOPに戻る" onClick="location.href='index.php'">
+    </div>
 
 
         </div><!--main_contets-->

@@ -6,21 +6,19 @@
     <div class="wrapper">
 
         <div class="header_logo_main">
-                <?= anchor('index', 
-                    img(array
+                <?= img(array
                         (   'src' => 'images/logo_main.png',
                             'alt' => '未来コライロゴ'))
-                ) ?>
+                ?>
         </div>
         <div class="main_top">
                 <p>Barbershop Quartet</p>
                 <h1>未来コライ</h1>
             <div class="main_top_img">
-                <?= anchor('index', 
-                    img(array
+                <?= img(array
                         (   'src' => 'images/index_images/index_01.png',
                             'alt' => 'メインイメージ'))
-                ) ?>
+                ?>
             </div>
         </div>
         <div class="main_contents">

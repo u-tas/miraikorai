@@ -37,14 +37,14 @@ class Contact extends CI_Controller {
             $config['newline'] = '\r\n';
             $this->email->initialize($config);
             $this->email->from($this->input->post('email'));
-            $this->email->to('tomosuko.3612@gmail.com');
-            $this->email->subject('お問い合わせを受け付けました');
+            $this->email->to('quar.miraikorai@gmail.com');
+            $this->email->subject($this->input->post('username'));
             $this->email->message($this->input->post('text'));
-//              $this->email->message($message);
-            // メール送信
-            $this->email->send();
+//            $name = 'username';
+//            $contents = 'text';
+//            $this->email->messege();
             
-            echo $this->email->print_debugger();
+            $this->email->send();
             
         }
     }
