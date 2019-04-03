@@ -40,9 +40,6 @@ class Contact extends CI_Controller {
             $this->email->to('quar.miraikorai@gmail.com');
             $this->email->subject($this->input->post('username'));
             $this->email->message($this->input->post('text'));
-//            $name = 'username';
-//            $contents = 'text';
-//            $this->email->messege();
             
             $this->email->send();
             
