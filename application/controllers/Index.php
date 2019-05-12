@@ -12,7 +12,7 @@ class Index extends CI_Controller {
     public function index() 
     {
         $data['title'] = '';
-        $data['information'] = $this->Information_model->get_information();
+        $data['information'] = $this->Information_model->get_information(4);
         $this->load->view('templates/header', $data);
         $this->load->view('index', $data);
         $this->load->view('templates/footer');

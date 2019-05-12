@@ -9,10 +9,13 @@ class Information_model extends CI_Model {
     }
 
     const table_name = "INFORMATION";
-    const default_count = 4;
 
-    public function get_information($count = self::default_count) {
-        $this->db->limit($count)->get_compiled_select(self::table_name,false);
+    public function get_information($count = NULL) {
+        if (is_null($count)) {
+            $this->db->get_compiled_select(self::table_name,false);
+        } else {
+            $this->db->limit($count)->get_compiled_select(self::table_name,false);
+        }
         $this->db->order_by("publishment_date", "desc");
         $this->db->where("publishment_date <=", date("Y-m-d H:i:s"));
         return $this->db->get()->result_array();

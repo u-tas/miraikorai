@@ -6,7 +6,7 @@ header{
   left:0;
   z-index:134;
   width:100%;
-	background: rgba(254,251,241,0.9);
+	background: rgba(25,42,81,0.9);
 }
 .header_top {
     height: 15px;
@@ -22,89 +22,15 @@ header{
     width: 100%;
 }
 .header_logo {
-	width: 58px;
+	width: 64px;
 	float: left;
 	margin-top: -15px;
 	margin-left: 10px;
-}
-/*言語切り替え*/
-.header_menu_lng {
-    float:right;
-}
-
-.header_menu_lng ul {
-	  display: flex;
-    position: relative;
-		margin-top: 3px;
-}
-
-.header_menu_lng ul::after {
-    display: block;
-    clear: both;
-    content: '';
-}
-
-.header_menu_lng ul li {
-    position: relative;
-		width: 121px;
-    float: left;
-    transition: .2s;
-    text-align: center;
-		font-size: 11px;
-
-}
-
-.header_menu_lng ul li:hover > ul {
-    visibility: visible;
-    opacity: 1;
-}
-
-.header_menu_lng ul ul {
-    top: 100%;
-    position: absolute;;
-    visibility: hidden;
-    opacity: 0;
-    transition: .2s ease-in-out;
-		display: flex;
-		margin-left: -4px;
-		margin-top:0;
-}
-.header_menu_lng ul ul li {
-    width: 55px;
-    padding:6px 0;
-    margin:3px;
-    font-size: 14px;
-		background-color: #192a51;
-    color: #fefbf1;
-    text-align: center;
-}
-.header_menu_lng ul ul li a{
-  display: inline;
-  padding:6px 18px 6px 20px;
-  font-size: 14px;
-  width: 55px;
-  color: #fefbf1;
-  line-height: 0;
-  text-align: center;
-  background-color: #8291ab;
-
-}
-.header_menu_lng ul ul li a:hover{
-		background-color: #192a51;
-}
-.lang_select a{
-	  background-color: #192a51;
-}
-.lng_icon{
-    float:left;
-}
-.header_menu_lng p{
-	  margin:3px;
-		letter-spacing: 0px;
+        color: #fefbf1;
 }
 /*header メインメニュー*/
 .header_menu_main {
-    width: 500px;
+    width: 620px;
     margin:0 auto;
 }
 
@@ -120,9 +46,10 @@ header{
     display: inline-block;
     transition: .3s;
     margin-top:5px;
-	  font-size: 17px;
-		letter-spacing: 0.2em;
-		padding:0 10px;
+    font-size: 17px;
+    letter-spacing: 0.2em;
+    padding:0 10px;
+    color: #fefbf1;
 }
 
 .header_menu_main li a::after {
@@ -135,6 +62,25 @@ header{
     height: 2px;
     opacity: 0;
     transition: .3s;
+}
+/*header メインメニュー2階層目*/
+.header_menu_main li ul {
+   display: none;
+   background-color: #fefbf1;
+   border: solid 2.5px #192a51;
+   margin: 7px;
+   padding-bottom: 4px;
+   position: absolute;
+}
+.header_menu_main li:hover ul {
+   display: block;
+}
+.header_menu_main li ul li {
+    width: 100px;
+    padding:3px 0 5px 0;
+}
+.header_menu_main li ul li a{
+    color: #192a51;
 }
 /*footer*/
 .footer_bottom{
@@ -182,6 +128,28 @@ header{
 .square_down{
     margin-top:32px;
 
+}
+/*一覧表示テーブル*/
+.list{
+    width:95%;
+    margin:20px auto 50px auto;
+    border-spacing: 0px;
+}
+.list th{
+    background-color: #192a51;
+    color: #fefbf1;
+    padding:15px;
+}
+.list td{
+    padding:15px;
+    border-bottom: solid 2px #192a51;
+    text-align: center;
+}
+.list_menu{
+    font-size: 20px;
+}
+.list .list_title{
+    text-align: left;
 }
 @media screen and (max-width:1130px) {
     .header_nav {
