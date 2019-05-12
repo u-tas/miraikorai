@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-
-<html lang="ja">
-
-<head>
-
-    <title>未来コライ|miraikorai</title>
 
 
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="未来コライは、混声のバーバーショップを歌うカルテットグループです。">
-    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="format-detection" content="telephone=no" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/color_style.css" />
-    <link rel="stylesheet" href="css/header_footer.css" />
-    <link rel="stylesheet" href="css/stage_style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!--web icon-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <script src="js/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(function(){
-            $("header").load("./header.html");
-            $(".footer_bottom").load("./footer.html");
-        })
-    </script>
-</head>
+<?= link_tag("css/stage_style.css")?>
 
 <body>
     <div class="wrapper">
@@ -40,83 +12,60 @@
                 <h1 class="pege_title">STAGE</h1>
             </div>
 
-            <div class="stage_title blue">Coming Soon</div>
-<!--            <div class="member_part_bottom">
+            <div class="stage_title blue"><?= $stage[0]->title?></div>
+            <div class="member_part_bottom">
              <div class="member_part_box_left bg_blue"></div>
              <div class="member_part_center bg_blue"></div>
              <div class="member_part_box_right bg_blue"></div>
             </div>
-            <p class="alert">この演奏会は終了いたしました</p>
+            <?php if (strtotime($stage[0]->open_date) <= strtotime(date("Y/m/d"))) 
+            { echo '<p class="alert">この演奏会は終了いたしました</p>'; } ?>
             <div class="stage_contents">
             <div class="stage_photo"><img src="images/stage_images/stage_image01.jpg" alt="演奏会チラシ"></div>
 
             <div class="stage_text">
-            <p class="stage_text_overview">概要。ここに概要をかきます。どんな経緯で演奏会が開かれるのか、どんな人たちが演奏するのか、どんな曲目を演奏するのかいろいろかきます。お楽しみに！
+            <p class="stage_text_overview"><?= $stage[0]->detail?>
             </p>
-            <div class="button sp_only"><a href="#">予約する</a></div>
+            <div class="button sp_only"><?= anchor($stage[0]->book_url, "予約する")?>></div>
+<?php
+foreach ($stages as $stages_one) { ?>
+    
 <div class="stage_text_main">
-            <p class="stage_text_no green"><span>1</span>st stage</p>
-            <p class="stage_text_name green">Barbershop</p>
+            <p class="stage_text_no green"><?= $stages_one->order_no?></p>
+            <p class="stage_text_name green"><?= $stages_one->title?></p>
             <div class="steag_title_bottom">
              <div class="member_part_center bg_green"></div>
             </div>
             <div class="stage_text_conductor">
-              <p><span>指揮</span>Xxxxxxx</p>
-              <p><span>ピアノ</span>Xxxxxxx</p>
+              <p><span>指揮</span><?= $stages_one->conductor_name?></p>
+              <p><span>ピアノ</span><?= $stages_one->pianist_name?></p>
             </div>
-            <p class="stage_text_music green">曲名xxxxxxxxxxxx</p>
+    <?php foreach ($stages_one->array_song as $song) { ?>
+            <p class="stage_text_music green"><?=$song->title?></p>
             <div class="stage_text_author">
-              <p><span>作詞</span>Xxxxxxx</p>
-              <p><span>作曲</span>Xxxxxxx</p>
-              <p><span>編曲</span>Xxxxxxx</p>
-            </div>
-            <p class="stage_text_music green">曲名xxxxxxxxxxxx</p>
-            <div class="stage_text_author">
-              <p><span>作詞</span>Xxxxxxx</p>
-              <p><span>作曲</span>Xxxxxxx</p>
-              <p><span>編曲</span>Xxxxxxx</p>
-            </div>
-</div>
-<div class="stage_text_main">
-            <p class="stage_text_no yellow"><span>2</span>nd stage</p>
-            <p class="stage_text_name yellow">バーバーショップ</p>
-            <div class="steag_title_bottom">
-             <div class="member_part_center bg_yellow"></div>
-            </div>
-            <div class="stage_text_conductor">
-              <p><span>指揮</span>Xxxxxxx</p>
-              <p><span>ピアノ</span>Xxxxxxx</p>
-            </div>
-            <p class="stage_text_music yellow">曲名xxxxxxxxxxxx</p>
-            <div class="stage_text_author">
-              <p><span>作詞</span>Xxxxxxx</p>
-              <p><span>作曲</span>Xxxxxxx</p>
-              <p><span>編曲</span>Xxxxxxx</p>
-            </div>
-            <p class="stage_text_music yellow">曲名xxxxxxxxxxxx</p>
-            <div class="stage_text_author">
-              <p><span>作詞</span>Xxxxxxx</p>
-              <p><span>作曲</span>Xxxxxxx</p>
-              <p><span>編曲</span>Xxxxxxx</p>
-            </div>
-          </div>
+              <p><span>作詞</span><?=$song->lyric_by?></p>
+              <p><span>作曲</span><?=$song->song_by?></p>
+              <p><span>編曲</span><?=$song->arranged_by?></p>
+            </div> <?php }?>
+
+</div> <?php }?>
           <div class="stage_text_agenda">
-            <p class="stage_text_date">2018年<span>4</span>月<span>27</span>日(土)</p>
+              <p class="stage_text_date"><?=substr($stage[0]->open_date, 0, 4)."年"?><span><?=substr($stage[0]->open_date,5,2)?></span>月<span><?=substr($stage[0]->open_date,8,2)?></span>日(<?php $week = array( "日", "月", "火", "水", "木", "金", "土" ); echo $week[date("w", strtotime($stage[0]->open_date))]?>)</p>
             <div class="stage_text_time">
-              <p class="stage_text_date"><span>開場</span>14:00</p>
-              <p class="stage_text_date"><span>開演</span>14:30</p>
+              <p class="stage_text_date"><span>開場</span><?=substr($stage[0]->open_date, 11,5)?></p>
+              <p class="stage_text_date"><span>開演</span><?=substr($stage[0]->start_date, 11,5)?></p>
             </div>
           </div>
           <div class="stage_text_holl">
-            <div class="stage_text_hollName">武蔵野市民文化会館</div>
-            <div class="stage_text_hollUrl"><a href="#">詳細</a></div>
+            <div class="stage_text_hollName"><?=$stage[0]->name?></div>
+            <div class="stage_text_hollUrl"><?= anchor($stage[0]->official_url, "詳細")?></div>
           </div>
-          <p class="stage_text_hollAcsses">中央線「三鷹」駅から徒歩15分</p>
+          <p class="stage_text_hollAcsses"><?=$stage[0]->access?></p>
 
-          <p class="stage_text_other"><i class="fas fa-exclamation-triangle"></i>お車でのご来場はお控えください。</p>
+          <p class="stage_text_other"><i class="fas fa-exclamation-triangle"></i><?=$stage[0]->attention?></p>
 
-          <p class="stage_text_price">入場料<span>1000</span>円(自由席)</p>
-          <div class="button"><a href="#">予約する</a></div>
+          <p class="stage_text_price">入場料<span><?=$stage[0]->ticket_detail?></span></p>
+          <div class="button"><?= anchor($stage[0]->book_url, "予約する")?></div>
 </div>
 </div> steag_contents 
 <div class="title_sub_contents">
@@ -179,7 +128,7 @@
        </div>
        <div class="backnumber_moer"><a href="stage_list.html">MORE</a></div>
     </div>
-    <div class="button"><a href="#">過去の演奏動画はこちら</a></div>-->
+    <div class="button"><a href="#">過去の演奏動画はこちら</a></div>
         </div>
         <!--main_contets-->
 
