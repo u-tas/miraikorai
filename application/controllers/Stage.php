@@ -20,7 +20,6 @@ class Stage extends CI_Controller {
             $stage = $this->Stage_model->get_song($stage);
         }
         $data['stages'] = $stages->array_stages;
-        print_r($data['stages']);
         $this->load->view('stage/stage',$data);
         $this->load->view('templates/footer');
     }
