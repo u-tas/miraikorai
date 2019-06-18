@@ -51,10 +51,10 @@ foreach ($stages as $stages_one) { ?>
 </div> <?php }?>
           <div class="stage_text_agenda">
               <p class="stage_text_date"><?=substr($stage[0]->open_date, 0, 4)."年"?><span><?=substr($stage[0]->open_date,5,2)?></span>月<span><?=substr($stage[0]->open_date,8,2)?></span>日(<?php $week = array( "日", "月", "火", "水", "木", "金", "土" ); echo $week[date("w", strtotime($stage[0]->open_date))]?>)</p>
-            <div class="stage_text_time">
-              <p class="stage_text_date"><span>開場</span><?=substr($stage[0]->open_date, 11,5)?></p>
-              <p class="stage_text_date"><span>開演</span><?=substr($stage[0]->start_date, 11,5)?></p>
-            </div>
+          </div>
+          <div class="stage_text_time">
+            <p class="stage_text_date"><span>開場</span><?=substr($stage[0]->open_date, 11,5)?></p>
+            <p class="stage_text_date"><span>開演</span><?=substr($stage[0]->start_date, 11,5)?></p>
           </div>
           <div class="stage_text_holl">
             <div class="stage_text_hollName"><?=$stage[0]->name?></div>
@@ -63,11 +63,10 @@ foreach ($stages as $stages_one) { ?>
           <p class="stage_text_hollAcsses"><?=$stage[0]->access?></p>
 
           <p class="stage_text_other"><i class="fas fa-exclamation-triangle"></i><?=$stage[0]->attention?></p>
-
-          <p class="stage_text_price">入場料<span><?=$stage[0]->ticket_detail?></span></p>
-          <div class="button"><?= anchor($stage[0]->book_url, "予約する")?></div>
 </div>
-</div> steag_contents 
+</div>
+<p class="stage_text_price">入場料<span><?=$stage[0]->ticket_detail?></span></p>
+<div class="button"><?= anchor($stage[0]->book_url, "予約する")?></div>
 <div class="title_sub_contents">
     <h2 class="pege_title_sub blue">Back number</h2>
     <div class="title_sub_border_bottom bg_blue">

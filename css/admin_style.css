@@ -151,6 +151,9 @@ header{
 .list .list_title{
     text-align: left;
 }
+#form_date{
+    width: 200px;
+}
 @media screen and (max-width:1130px) {
     .header_nav {
         margin-left: 10px;
