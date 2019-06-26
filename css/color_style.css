@@ -89,7 +89,7 @@
 
 /*グラデーションカラー*/
 .gradation_1{
-    background-color: #6c3d55;
+    background-color: #6c3d55;/*red*/
 }
 .gradation_2{
     background-color: #5a405a;
@@ -101,7 +101,7 @@
     background-color: #364563;
 }
 .gradation_5{
-    background-color: #244768;
+    background-color: #244768;/*blue*/
 }
 .gradation_6{
     background-color: #284c68;
@@ -113,7 +113,7 @@
     background-color: #2f5768;
 }
 .gradation_9{
-    background-color: #335c68;
+    background-color: #335c68;/*green*/
 }
 .gradation_10{
     background-color: #456164;
@@ -125,7 +125,7 @@
     background-color: #6a6c5c;
 }
 .gradation_13{
-    background-color: #7c7158;
+    background-color: #7c7158;/*yellow*/
 }
 .gradation_14{
     background-color: #786457;
