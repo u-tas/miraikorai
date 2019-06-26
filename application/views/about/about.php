@@ -321,6 +321,7 @@
                     <div class="box_bottom"></div>
                 </div>
                 <div class="about_history_main">
+ 
                     <?php $year = '';?>
                     <?php foreach ($history as $history_item) : ?>
                         <?php if (strcmp($year, substr($history_item['publishment_date'], 0, 4))) : ?>

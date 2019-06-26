@@ -31,17 +31,18 @@
 foreach ($stages as $stages_one) { ?>
     
 <div class="stage_text_main">
-            <p class="stage_text_no green"><?= $stages_one->order_no?></p>
-            <p class="stage_text_name green"><?= $stages_one->title?></p>
+            <p class="stage_text_name blue"><?= $stages_one->title?></p>
             <div class="steag_title_bottom">
-             <div class="member_part_center bg_green"></div>
+             <div class="member_part_center bg_blue"></div>
             </div>
             <div class="stage_text_conductor">
-              <p><span>指揮</span><?= $stages_one->conductor_name?></p>
-              <p><span>ピアノ</span><?= $stages_one->pianist_name?></p>
+            <?php if ($stages_one->conductor_name)
+            { echo "<p><span>指揮</span> $stages_one->conductor_name</p>"; } ?> 
+            <?php if ($stages_one->pianist_name)
+            { echo "<p><span>ピアノ</span> $stages_one->pianist_name</p>"; } ?>
             </div>
     <?php foreach ($stages_one->array_song as $song) { ?>
-            <p class="stage_text_music green"><?=$song->title?></p>
+            <p class="stage_text_music blue"><?=$song->title?></p>
             <div class="stage_text_author">
               <p><span>作詞</span><?=$song->lyric_by?></p>
               <p><span>作曲</span><?=$song->song_by?></p>
@@ -65,69 +66,44 @@ foreach ($stages as $stages_one) { ?>
           <p class="stage_text_other"><i class="fas fa-exclamation-triangle"></i><?=$stage[0]->attention?></p>
 </div>
 </div>
-<p class="stage_text_price">入場料<span><?=$stage[0]->ticket_detail?></span></p>
+<p class="stage_text_price"><span><?=$stage[0]->ticket_detail?></span></p>
 <div class="button"><?= anchor($stage[0]->book_url, "予約する")?></div>
-<div class="title_sub_contents">
+<!--<div class="title_sub_contents">
     <h2 class="pege_title_sub blue">Back number</h2>
     <div class="title_sub_border_bottom bg_blue">
     </div>
 </div>
-    <div class="backnumber">
+        <div class="backnumber">
        <div class="backnumber_photo">
+           <?php $css_class = array
+                   ( 0 => 'bg_red',
+                    1 => 'bg_blue',
+                    2 => 'bg_green',
+                    3 => 'bg_yellow'); 
+            ?>
            <ul>
+               <?php $count = 0;?>
+               <?php foreach ($latest_posts as $latest_post) :?>
              <li>
-               <a href="#">
+                 <a href="<?= base_url("blog/".$latest_post['id']) ?>">
                <figure>
-                 <img src="images/blog.png" alt="演奏会チラシ">
-                 <div class="overlay bg_red"></div>
-                 <figcaption class="bg_red">
-                   <h3>あああああああああああああああああああ</h3>
-                   <p>10-24-2018</p>
+                   <?= img("images/blog_images/".$latest_post['image_url']) ?>
+                 <div class="<?= "overlay ".$css_class[$count%count($css_class)]?>"></div>
+                 <figcaption class="<?= $css_class[$count%count($css_class)]?>">
+                   <h3><?=$latest_post['title'] ?></h3>
+                   <p><?=substr($latest_post['publishment_date'], 5, 5)."-".substr($latest_post['publishment_date'], 0, 4) ?></p>
                  </figcaption>
                </figure>
-               </a>
-             </li>
-             <li>
-               <a href="#">
-               <figure>
-                 <img src="images/blog.png" alt="演奏会チラシ">
-                 <div class="overlay bg_blue"></div>
-                 <figcaption class="bg_blue">
-                   <h3>Captionssssssssssssssss Title</h3>
-                   <p>10-24-2018</p>
-                 </figcaption>
-               </figure>
-               </a>
-             </li>
-             <li>
-               <a href="#">
-               <figure>
-                 <img src="images/blog.png" alt="演奏会チラシ">
-                 <div class="overlay bg_green"></div>
-                 <figcaption class="bg_green">
-                   <h3>Caption Title</h3>
-                   <p>10-24-2018</p>
-                 </figcaption>
-               </figure>
-               </a>
-             </li>
-             <li>
-               <a href="#">
-               <figure>
-                 <img src="images/blog.png" alt="演奏会チラシ">
-                 <div class="overlay bg_yellow"></div>
-                 <figcaption class="bg_yellow">
-                   <h3>Caption Title</h3>
-                   <p>10-24-2018</p>
-                 </figcaption>
-               </figure>
-               </a>
-             </li>
+                 </a>
+                 </li>
+                <?php $count++; endforeach;?>
            </ul>
-       </div>
-       <div class="backnumber_moer"><a href="stage_list.html">MORE</a></div>
+       </div>-->
+<!--        <div class="backnumber_moer">
+                //<?= anchor("blog/list", "MORE") ?>
+</div>-->
     </div>
-    <div class="button"><a href="#">過去の演奏動画はこちら</a></div>
+<!--    <div class="button"><a href="#">過去の演奏動画はこちら</a></div>-->
         </div>
         <!--main_contets-->
 

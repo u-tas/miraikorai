@@ -84,21 +84,20 @@
 .stage_text_overview{
   line-height: 1.2em;
 }
-.stage_text_no{
-  margin:34px 0 5px;
-  font-size:14px;
-}
 .stage_text_no span{
   font-size:18px;
   margin-right: -1px;
 }
 .stage_text_name{
   font-size:22px;
+  margin-top: 34px;
   margin-bottom: 7px;
+  font-weight: bold;
 }
 .stage_text_music{
   font-size: 20px;
   margin: 15px 10px 3px 10px;
+  font-weight: bold;
 }
 .stage_text_author{
   display: flex;
@@ -190,8 +189,7 @@
   text-align: center;
 }
 .stage_text_price span{
-  font-size: 25px;
-  margin: 0 3px 0 6px;
+  font-size: 20px;
 }
 figure {
     position: relative;
