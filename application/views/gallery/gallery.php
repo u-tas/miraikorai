@@ -26,7 +26,7 @@
              <li><div class="video">
                  <a href="https://www.youtube.com/embed/dVlTmWQ8_Tw" class="boxer_sample" data-gallery="videos">
                <figure>
-                   <img src="images/gallery_images/blog_1.png" />
+                   <img src="images/gallery_images/movie_01.png" />
                  <div class="overlay gradation_10"></div>
                  <figcaption class="gradation_10">
                    <h3>SEEMS LIKE OLD TIMES</h3>
@@ -38,7 +38,7 @@
                  <li>
                  <a href="https://www.youtube.com/embed/37jD6oLoQ_8" class="boxer_sample" data-gallery="videos">
                <figure>
-                   <img src="images/gallery_images/blog_1.png" />
+                   <img src="images/gallery_images/movie_02.png" />
                  <div class="overlay gradation_11"></div>
                  <figcaption class="gradation_11">
                    <h3>THE STARS AND STRIPES FOREVER</h3>

@@ -3,7 +3,12 @@
 .backnumber_photo ul{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+}
+.backnumber_photo ul::after{
+  content:"";
+  display: block;
+  width:30%;
 }
 .backnumber_photo li{
   margin:10px 10px;
@@ -92,6 +97,10 @@ figure:hover figcaption {
 .backnumber_photo ul {
     max-width: 750px;
     margin: 0 auto;
+    justify-content: center;
+}
+.backnumber_photo ul::after{
+  width:0%;
 }
 .backnumber_moer{
     width: 51.5%;

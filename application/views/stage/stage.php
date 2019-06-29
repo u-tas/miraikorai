@@ -21,12 +21,13 @@
             <?php if (strtotime($stage[0]->open_date) <= strtotime(date("Y/m/d"))) 
             { echo '<p class="alert">この演奏会は終了いたしました</p>'; } ?>
             <div class="stage_contents">
-            <div class="stage_photo"><img src="images/stage_images/stage_image01.jpg" alt="演奏会チラシ"></div>
+            <div class="stage_photo"><img src="images/stage_images/stage_01.png" alt="演奏会チラシ"></div>
 
             <div class="stage_text">
             <p class="stage_text_overview"><?= $stage[0]->detail?>
             </p>
-            <div class="button sp_only"><?= anchor($stage[0]->book_url, "予約する")?>></div>
+            <p class="stage_text_price sp_only"><span><?=$stage[0]->ticket_detail?></span></p>
+            <div class="button sp_only"><?= anchor($stage[0]->book_url, "予約する")?></div>
 <?php
 foreach ($stages as $stages_one) { ?>
     
@@ -34,6 +35,7 @@ foreach ($stages as $stages_one) { ?>
             <p class="stage_text_name blue"><?= $stages_one->title?></p>
             <div class="steag_title_bottom">
              <div class="member_part_center bg_blue"></div>
+             <p><?= $stages_one->detail?></p>
             </div>
             <div class="stage_text_conductor">
             <?php if ($stages_one->conductor_name)

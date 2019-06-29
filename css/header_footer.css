@@ -195,9 +195,12 @@ header{
 }/*@media screen and (max-width:1130px)*/
 
 @media screen and (max-width:789px) {
-		.header_top{
-			margin-bottom: 18px;
-		}
+    .header_top{
+        margin-bottom: 18px;
+    }
+    .footer_bottom{
+        margin-top: 30px;
+    }
 }/*@media screen and (max-width:789px)*/
 
 /* drawer menu */
