@@ -20,5 +20,9 @@ class Information_model extends CI_Model {
         $this->db->where("publishment_date <=", date("Y-m-d H:i:s"));
         return $this->db->get()->result_array();
     }
+    
+    public function insert_information($set) {
+        return $this->db->insert(self::table_name, $set);
+    }
 
 }
