@@ -26,7 +26,7 @@ class Admin extends CI_Controller {
         $this->load->view('admin/information/index',$data);
         $this->load->view('templates/footer');
     }
-    public function Information_registration() 
+    public function InformationRegistration() 
     {
         $data['title'] = 'information';
         $data['information'] = $this->Information_model->get_information();

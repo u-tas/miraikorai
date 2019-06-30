@@ -10,26 +10,41 @@
             <div class="title_contents bg_navy">
                 <h1 class="pege_title">INFORMATION</h1>
             </div>
+            
             <div id="form-tbl">
+                <h2 class="pege_title_sub red">日本語</h2>
+                <div class="title_sub_border_bottom bg_red"></div>
                 <table summary="登録フォーム" id="form">
                     <tr>
-                            <th></th>
-                        </tr>
-                        <tr>
-                            <th>タイトル</th>
-                            <td><input type="text" name="title" value="" class="textlines"/></td>
-                        </tr>
-                        <tr>
-                            <th>日付</th>
-                            <td>
-                                <input id="form_date" type="date" name="date" value=""/>
-                            </td>
-                        </tr>
+                        <th>タイトル</th>
+                        <td>
+                            <input type="text" name="title" value="" class="textlines input_ja"/>                               
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>日付</th>
+                        <td>
+                            <input id="form_date" type="date" name="date" value="" class="input_ja"/>
+                        </td>
+                    </tr>
                     </table>
-                    <div class="btn">
-                        <input type="submit" value="送信する">
-                    </div>
+                <h2 class="pege_title_sub green">English</h2>
+                <div class="title_sub_border_bottom bg_green"></div>
+                <table summary="登録フォーム" id="form">
+                    <tr>
+                        <th>title</th>
+                        <td>
+                            <input type="text" name="title" value="" class="textlines input_eng"/>
+                            <p class="copy_btn">日本語をコピーする</p>
+                            
+                        </td>
+                        </td>
+                    </tr>
+                </table>
+                <div class="btn">
+                    <input type="submit" value="送信する">
                 </div>
+            </div>
         </div><!--main_contets-->
 
     </div><!--wrapper-->
