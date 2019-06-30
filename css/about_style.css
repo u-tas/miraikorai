@@ -186,8 +186,9 @@ table{
 }
 
 .event_title {
-    font-size: 20px;
-    margin-left: 10px;
+    font-size: 15px;
+    margin-left: 5px;
+    width: 194px;
 }
 .about_history_year p {
     padding-left: 0px;

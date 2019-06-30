@@ -21,7 +21,7 @@
             <?php if (strtotime($stage[0]->open_date) <= strtotime(date("Y/m/d"))) 
             { echo '<p class="alert">この演奏会は終了いたしました</p>'; } ?>
             <div class="stage_contents">
-            <div class="stage_photo"><img src="images/stage_images/stage_01.png" alt="演奏会チラシ"></div>
+            <div class="stage_photo"><?= img("images/stage_images/".$stage[0]->image_url) ?></div>
 
             <div class="stage_text">
             <p class="stage_text_overview"><?= $stage[0]->detail?>
