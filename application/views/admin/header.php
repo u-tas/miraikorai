@@ -14,7 +14,6 @@
     <?= link_tag("css/color_style.css")?>
     <?= link_tag("css/admin_style.css")?>
     
-    
 <!--    <script src="<?= base_url("js/language.js")?>"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--web icon-->

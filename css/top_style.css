@@ -154,7 +154,6 @@ table{
   th,td {
   display: block;
   text-align: left;
-  width: 100%;
 }
   .top_info_date {
     font-size: 13px;

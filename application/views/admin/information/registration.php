@@ -30,14 +30,14 @@
                         </td>
                     </tr>
                     </table>
-                <h2 class="pege_title_sub green">English</h2>
+                <h2 class="pege_title_sub green">ENGRISH</h2>
                 <div class="title_sub_border_bottom bg_green"></div>
                 <table summary="登録フォーム" id="form">
                     <tr>
-                        <th>Title</th>
+                        <th>TITLE</th>
                         <td>
                             <input type="text" name="title_en" value="" class="textlines input_eng"/>
-                            <p class="copy_btn">日本語をコピーする</p>
+                            <p class="copy_btn">日本語からコピーする</p>
                             
                         </td>
                         </td>

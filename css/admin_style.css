@@ -131,7 +131,7 @@ header{
 }
 /*一覧表示テーブル*/
 .list{
-    width:95%;
+    width:100%;
     margin:20px auto 50px auto;
     border-spacing: 0px;
 }
@@ -177,55 +177,35 @@ header{
     justify-content: center;
     background-color: #2a4866;
     color: #fdfdfd;
-    width: 140px;
+    width: 154px;
     padding: 7px 19px;
     font-size: 14px;
     border-radius: 22px;
 }
+.detail_btn a {
+    width: 42px;
+    display: inline-block;
+    padding: 6px 1px 6px 3px;
+    background-color: #2a4866;
+    border-radius: 22px;
+    color: #fefbf1;
+}
 
-/*詳細モーダル表示*/
-.modal-content {
-    position:fixed;
-    display:none;
+/*詳細画面*/
+.detail-content {
     z-index:2;
-    width:80%;
-    margin-top:90px;
     padding:20px;
     background:#fefbf1;
 }
  
-.modal-content p {
+.detail-content p {
     margin:0;
     padding:0;
 }
- 
-.modal-overlay {
-    z-index:1;
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:120%;
-    background-color:rgba(0,0,0,0.75);
-}
-.modal-open {
-    color:#192a51;
-    text-decoration:none;
-}
-
-.modal-close {
-    margin-left: auto;
-    padding:15px;
-    color:#fefbf1;
-    background-color: #192a51;
-    border-radius: 22px;
-}
-/*モーダル内*/
 .detail_list{
         margin-top:20px;
 }
-.modal-content h3{
+.detail-content h3{
     color: #fefbf1;
     font-size: 16px;
     font-weight: normal;
@@ -291,9 +271,9 @@ header{
 }/*@media screen and (max-width:1130px)*/
 
 @media screen and (max-width:789px) {
-		.header_top{
-			margin-bottom: 18px;
-		}
+    .header_top{
+        margin-bottom: 18px;
+    } 
 }/*@media screen and (max-width:789px)*/
 
 /* drawer menu */

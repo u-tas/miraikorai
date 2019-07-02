@@ -63,5 +63,12 @@ class Admin extends CI_Controller {
         $this->load->view('admin/information/registration',$data);
         $this->load->view('templates/footer');
     }
+    public function InformationDetail() 
+    {
+        $data['title'] = 'information';
+        $this->load->view('admin/header',$data);
+        $data['information'] = $this->Information_model->get_information();
+        $this->load->view('admin/information/detail',$data);
+    }
 }
 
