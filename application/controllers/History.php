@@ -14,7 +14,7 @@ class History extends CI_Controller {
         $data['history'] = $this->History_model->get_history();
         
         $this->load->view('templates/header',$data);
-        $this->load->view('blog/blog',$data);
+        $this->load->view('history/history',$data);
         $this->load->view('templates/footer');            
     }
     
