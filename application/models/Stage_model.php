@@ -19,6 +19,22 @@ class Stage_model extends CI_Model {
         return $query->custom_result_object("StageResult");
     }
     
+    public function get_stage_list(int $limit = NULL ,int $offset = NULL) {
+        if (is_null($limit)) {
+            $limit = 4;
+        }
+        if (is_null($offset)) {
+            $offset = 0;
+        }
+
+        $param = array($limit, $offset);
+        
+        $sql = "SELECT STAGE.id, STAGE.title, STAGE.open_date, STAGE_IMAGE.image_url FROM STAGE LEFT OUTER JOIN STAGE_IMAGE ON STAGE.id = STAGE_IMAGE.stage_id ORDER BY STAGE.open_date desc LIMIT ? OFFSET ?";
+        $query = $this->db->query($sql, $param);
+
+        return $query->result_array();
+    }
+    
     public function get_stages(StageResult $stageResult) {
         $sql = "SELECT * FROM STAGE_STAGES WHERE stage_id = ?";
         $query = $this->db->query($sql, array($stageResult->__get("id")));
@@ -71,6 +87,7 @@ class StagesResult {
     private $stage_id;
     private $order_no;
     private $title;
+    private $detail;
     private $conductor_name;
     private $pianist_name;
     private $timestamp_created;

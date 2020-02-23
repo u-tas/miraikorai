@@ -23,6 +23,10 @@
         
         <div class="main_contents">
             
+         <div class="title_contents bg_yellow">
+            <h1 class="pege_title">HISTORY</h1>
+         </div>
+            
             <div class="about_history">
                 <div class="about_history_tree">
                     <div class="box_top"></div>

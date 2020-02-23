@@ -70,7 +70,7 @@ foreach ($stages as $stages_one) { ?>
 </div>
 <p class="stage_text_price"><span><?=$stage[0]->ticket_detail?></span></p>
 <div class="button"><?= anchor($stage[0]->book_url, "予約する")?></div>
-<!--<div class="title_sub_contents">
+<div class="title_sub_contents">
     <h2 class="pege_title_sub blue">Back number</h2>
     <div class="title_sub_border_bottom bg_blue">
     </div>
@@ -85,24 +85,24 @@ foreach ($stages as $stages_one) { ?>
             ?>
            <ul>
                <?php $count = 0;?>
-               <?php foreach ($latest_posts as $latest_post) :?>
+               <?php foreach ($stage_list as $stage_one) :?>
              <li>
-                 <a href="<?= base_url("blog/".$latest_post['id']) ?>">
+                 <a href="<?= base_url("stage/".$stage_one['id']) ?>">
                <figure>
-                   <?= img("images/blog_images/".$latest_post['image_url']) ?>
+                   <?= img("images/stage_images/".$stage_one['image_url']) ?>
                  <div class="<?= "overlay ".$css_class[$count%count($css_class)]?>"></div>
                  <figcaption class="<?= $css_class[$count%count($css_class)]?>">
-                   <h3><?=$latest_post['title'] ?></h3>
-                   <p><?=substr($latest_post['publishment_date'], 5, 5)."-".substr($latest_post['publishment_date'], 0, 4) ?></p>
+                   <h3><?=$stage_one['title'] ?></h3>
+                   <p><?=substr($stage_one['open_date'], 5, 5)."-".substr($stage_one['open_date'], 0, 4) ?></p>
                  </figcaption>
                </figure>
                  </a>
                  </li>
                 <?php $count++; endforeach;?>
            </ul>
-       </div>-->
+       </div>
 <!--        <div class="backnumber_moer">
-                //<?= anchor("blog/list", "MORE") ?>
+                //<?= anchor("stage/list", "MORE") ?>
 </div>-->
     </div>
 <!--    <div class="button"><a href="#">過去の演奏動画はこちら</a></div>-->
