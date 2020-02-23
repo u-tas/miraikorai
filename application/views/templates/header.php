@@ -53,7 +53,7 @@
                   <li class="hover_red"><?= anchor('about', 'ABOUT') ?></li>
                   <li class="hover_blue"><?= anchor('stage', 'STAGE') ?></li>
                   <li class="hover_green"><?= anchor('gallery', 'GALLERY') ?></li>
-                  <li class="hover_yellow"><?= anchor('blog', 'BLOG') ?></li>
+                  <li class="hover_yellow"><?= anchor('history', 'HISTORY') ?></li>
               </ul>
           </nav>
         </div>
@@ -73,7 +73,7 @@
                      <li><?= anchor('about', 'ABOUT') ?></li>
                      <li><?= anchor('stage', 'STAGE') ?></li>
                      <li><?= anchor('gallery', 'GALLERY') ?></li>
-                     <li><?= anchor('blog', 'BLOG') ?></li>
+                     <li><?= anchor('history', 'HISTORY') ?></li>
                      <li><?= anchor('contact', 'CONTACT') ?></li>
 <!--                     <li><a href="" class="langEng">LANGUAGE JP<i class="fas fa-long-arrow-alt-right"></i>EN</a></li>-->
                  </ul>
