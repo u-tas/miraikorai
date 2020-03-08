@@ -10,10 +10,10 @@ class Stage_model extends CI_Model {
 
     public function get_stage(int $id = NULL) {
         if (is_null($id) === false) {
-            $sql = "SELECT * FROM STAGE INNER JOIN STAGE_PLACE ON STAGE.place = STAGE_PLACE.id LEFT OUTER JOIN STAGE_IMAGE ON STAGE.id = STAGE_IMAGE.stage_id WHERE STAGE.id = ?";
+            $sql = "SELECT STAGE.*, STAGE_IMAGE.image_url, STAGE_PLACE.name, STAGE_PLACE.name, STAGE_PLACE.access, STAGE_PLACE.attention, STAGE_PLACE.official_url FROM STAGE INNER JOIN STAGE_PLACE ON STAGE.place = STAGE_PLACE.id LEFT OUTER JOIN STAGE_IMAGE ON STAGE.id = STAGE_IMAGE.stage_id WHERE STAGE.id = ?";
             $query = $this->db->query($sql, array($id));
         } else {
-            $sql = "SELECT * FROM STAGE INNER JOIN STAGE_PLACE ON STAGE.place = STAGE_PLACE.id LEFT OUTER JOIN STAGE_IMAGE ON STAGE.id = STAGE_IMAGE.stage_id ORDER BY STAGE.open_date desc LIMIT 1";
+            $sql = "SELECT STAGE.*, STAGE_IMAGE.image_url, STAGE_PLACE.name, STAGE_PLACE.name, STAGE_PLACE.access, STAGE_PLACE.attention, STAGE_PLACE.official_url FROM STAGE INNER JOIN STAGE_PLACE ON STAGE.place = STAGE_PLACE.id LEFT OUTER JOIN STAGE_IMAGE ON STAGE.id = STAGE_IMAGE.stage_id ORDER BY STAGE.open_date desc LIMIT 1";
             $query = $this->db->query($sql);
         }
         return $query->custom_result_object("StageResult");

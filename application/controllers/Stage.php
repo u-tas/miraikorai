@@ -17,7 +17,7 @@ class Stage extends CI_Controller {
         
         $data['stage'] = $this->Stage_model->get_stage($start);
         $stages = $this->Stage_model->get_stages($data['stage'][0]);
-        foreach ($stages->array_stages as $stage) {
+        foreach ($stages->array_stages as $stage) { 
             $stage = $this->Stage_model->get_song($stage);
         }
         $data['stages'] = $stages->array_stages;
