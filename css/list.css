@@ -157,10 +157,10 @@ figcaption {
       transform: rotate(45deg);
 }
   .box_main img{
-      transform: rotate(-45deg);
-      width: 330px;
-      margin: -51px;
-      object-fit: cover;
+    transform: rotate(-45deg);
+    width: 482px;
+    margin: -95px -78px;
+    object-fit: cover;
 }
 .blog_cap{
   position: absolute;
@@ -184,6 +184,7 @@ figcaption {
 }
 .blog_image{
   overflow: hidden;
+  height: 230px;
 }
 @media screen and (max-width:789px) {
   .blog_list li {

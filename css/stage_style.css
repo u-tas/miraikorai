@@ -155,7 +155,7 @@
   margin-bottom: 6px;
 }
 .stage_text_hollName{
-  font-size: 22px;
+  font-size: 18px;
   margin-right: 5px;
 }
 .stage_text_hollUrl{
@@ -202,8 +202,8 @@ figure {
 }
 figure img{
   transform: rotate(45deg);
-  width: 256px;
-  margin: -39px;
+  width: 401px;
+  margin: -82px -159px;
   object-fit: cover;
 }
 .overlay{

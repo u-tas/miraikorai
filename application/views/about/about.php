@@ -117,7 +117,7 @@
                    <div class="member_part_center bg_blue"></div>
                    <div class="member_part_box_right bg_blue"></div>
                   </div>
-                  <p class="member_name blue">小泉 朋子</p>
+                  <p class="member_name blue">上原 朋子</p>
                   <p class="member_nickname blue">トモスコ</p>
                   </div>
               <div class="item about_member_image">
@@ -139,12 +139,12 @@
                   <tr>
                      <th class="blue">職業</th>
                      <td class="table_icon blue">◆</td>
-                     <td>ITエンジニア</td>
+                     <td>デザイナー</td>
                     </tr>
                     <tr>
                      <th class="blue">生息地</th>
                      <td class="table_icon blue">◆</td>
-                     <td>吉祥寺</td>
+                     <td>布団</td>
                     </tr>
                     <tr>
                      <th class="blue">性格</th>
@@ -159,7 +159,7 @@
                   <tr>
                    <th class="blue">座右の銘</th>
                    <td class="table_icon blue">◆</td>
-                   <td>思い立ったが吉日</td>
+                   <td>誰もやらないから面白い</td>
                   </tr>
                   <tr>
                    <th class="blue">特技</th>
