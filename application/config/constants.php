@@ -83,3 +83,7 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+// microCMS Settings
+define('HEADLESS_CMS_ENDPOINT', 'https://miraikorai.microcms.io/api/v1');
+define('API_KEY', '80d33090-101b-4f2d-998a-ea4ff3d7fdce');
