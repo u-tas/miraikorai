@@ -36,7 +36,7 @@
               <?php $count = 0;?>
               <?php foreach ($stage_list as $stage) :?>
                 <li>
-                  <a href="<?= base_url("stage/".$stage['id']) ?>"> <!--index.php-->
+                  <a href="<?= base_url("stage/".str_replace('stage-', '', $stage['id'])) ?>"> <!--index.php-->
                 <div class="blog_cap">
                     <div class="blog_title"><?=$stage['title']?></div>
                     <div class="member_part_bottom">
@@ -49,7 +49,7 @@
                 <div class="box_main gradation_1">
                 <div class="blog_image">
                     <div class="overlay <?=$css_class[$count%count($css_class)]?>"></div>
-                    <?= img("images/stage_images/".$stage['image_url'])?>
+                    <?= img($stage['image_url']['url'])?>
                 </div>
                 </div>
               </a>

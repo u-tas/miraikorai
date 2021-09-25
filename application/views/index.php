@@ -31,7 +31,7 @@
                         <td class="top_info_date"><?= substr($information_item['publishment_date'], 5, 5)."-".substr($information_item['publishment_date'], 0, 4) ?></td>
                         <td class="top_info_mark pc_only">◆</td>
                         <td class="top_info_text hover_yellow"><?=$information_item['title']?>
-                        <?=$information_item['detail']?></td>
+                        <?=!empty($information_item['detail']) ? $information_item['detail'] : ''?></td>
                     </tr>
                     <?php endforeach;?>
                 </table>
